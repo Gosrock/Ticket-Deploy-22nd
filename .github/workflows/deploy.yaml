@@ -38,9 +38,10 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.KEY }}
           envs:
           script: |
             sh ~/srv/ubuntu/deploy.sh
             echo "start docker-compose up: ubuntu"
-            sudo su -c deploy.sh
+            sudo docker-compose -f ~/srv/ubuntu/docker-compose.yml pull
+            sudo docker-compose -f ~/srv/ubuntu/docker-compose.yml --env-file ~/srv/ubuntu/.env up --build -d
