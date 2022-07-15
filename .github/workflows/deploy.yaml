@@ -43,7 +43,4 @@ jobs:
           script: |
             sh ~/srv/ubuntu/deploy.sh
             echo "start docker-compose up: ubuntu"
-            docker-compose -v
-            cat ~/srv/ubuntu/.env
-            docker-compose -f ~/srv/ubuntu/docker-compose.yml pull
-            docker-compose -f ~/srv/ubuntu/docker-compose.yml --env-file ~/srv/ubuntu/.env up --build -d
+            sudo su -c deploy.sh
