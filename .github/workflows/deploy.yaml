@@ -21,8 +21,8 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ubuntu
-          key: ${{ secrets.KEY }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           script: mkdir -p ~/srv/ubuntu
 
       - name: copy source via ssh key
@@ -31,14 +31,14 @@ jobs:
           switches: -avzr --delete
           remote_path: ~/srv/ubuntu/
           remote_host: ${{ secrets.HOST }}
-          remote_user: ubuntu
-          remote_key: ${{ secrets.KEY }}
+          remote_user: ${{ secrets.USERNAME }}
+          remote_key: ${{ secrets.PASSWORD }}
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          username: ubuntu
-          key: ${{ secrets.KEY }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
           envs:
           script: |
             sh ~/srv/ubuntu/deploy.sh
