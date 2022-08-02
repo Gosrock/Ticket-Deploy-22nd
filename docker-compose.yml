@@ -15,7 +15,7 @@ services:
     container_name: front
     network_mode: "host"
   admin:
-    image: water0641/ticket-admin-22th:0.0.3
+    image: water0641/ticket-admin-22th:0.0.4
     container_name: admin
     network_mode: "host"
   nginx:
