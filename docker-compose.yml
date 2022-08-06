@@ -18,6 +18,7 @@ services:
     image: water0641/ticket-admin-22th:0.0.6
     container_name: admin
     network_mode: "host"
+    # docker build water0641/ticket-nginx-22th:1.0.3 --platform linux/amd64 .
   nginx:
     network_mode: "host"
     depends_on:
@@ -25,4 +26,4 @@ services:
       - front
       - admin
     restart: always
-    image: water0641/ticket-nginx-22th:1.0.2
+    image: water0641/ticket-nginx-22th:1.0.3
