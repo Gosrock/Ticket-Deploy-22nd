@@ -15,7 +15,7 @@ services:
     container_name: front
     network_mode: "host"
   admin:
-    image: water0641/ticket-admin-22th:0.1.1
+    image: water0641/ticket-admin-22th:0.1.2
     container_name: admin
     network_mode: "host"
     # docker build water0641/ticket-nginx-22th:1.0.3 --platform linux/amd64 .
