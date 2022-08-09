@@ -11,7 +11,7 @@ services:
     network_mode: "host"
   front:
     # david0218/ticket-front:dev
-    image: water0641/ticket-front:1.1.3
+    image: david0218/ticket-front:dev
     container_name: front
     network_mode: "host"
   admin:
