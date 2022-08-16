@@ -10,12 +10,7 @@ services:
       - .env
     network_mode: "host"
   front:
-    # david0218/ticket-front:dev
-<<<<<<< HEAD
     image: david0218/ticket-front:0.1.2
-=======
-    image: david0218/ticket-front:0.1.0
->>>>>>> 894b2544267a9b079d9c1e6abcdfa2aed28eacc6
     container_name: front
     network_mode: "host"
   admin:
