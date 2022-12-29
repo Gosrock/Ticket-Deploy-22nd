@@ -10,11 +10,11 @@ services:
       - .env
     network_mode: "host"
   front:
-    image: david0218/ticket-front:1.1.0
+    image: david0218/dudung-ticket:dev
     container_name: front
     network_mode: "host"
   admin:
-    image: water0641/ticket-admin-22th:1.0.2
+    image: david0218/dudung-admin:dev
     container_name: admin
     network_mode: "host"
     # docker build water0641/ticket-nginx-22th:1.0.3 --platform linux/amd64 .
